@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		530CDEF923733FE400335B50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CDEF823733FE400335B50 /* AppDelegate.swift */; };
 		530CDEFB23733FE400335B50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CDEFA23733FE400335B50 /* SceneDelegate.swift */; };
-		530CDEFD23733FE400335B50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CDEFC23733FE400335B50 /* ViewController.swift */; };
 		530CDF0023733FE400335B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530CDEFE23733FE400335B50 /* Main.storyboard */; };
 		530CDF0223733FE600335B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530CDF0123733FE600335B50 /* Assets.xcassets */; };
-		530CDF0523733FE600335B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530CDF0323733FE600335B50 /* LaunchScreen.storyboard */; };
+		530CDF1A23736A2900335B50 /* IntroViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530CDF1923736A2900335B50 /* IntroViews.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		530CDEF523733FE400335B50 /* PuppyPatisserie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuppyPatisserie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530CDEF823733FE400335B50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		530CDEFA23733FE400335B50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		530CDEFC23733FE400335B50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		530CDEFF23733FE400335B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		530CDF0123733FE600335B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		530CDF0423733FE600335B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		530CDF0623733FE600335B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		530CDF1923736A2900335B50 /* IntroViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViews.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,38 @@
 		530CDEF723733FE400335B50 /* PuppyPatisserie */ = {
 			isa = PBXGroup;
 			children = (
-				530CDEF823733FE400335B50 /* AppDelegate.swift */,
-				530CDEFA23733FE400335B50 /* SceneDelegate.swift */,
-				530CDEFC23733FE400335B50 /* ViewController.swift */,
-				530CDEFE23733FE400335B50 /* Main.storyboard */,
-				530CDF0123733FE600335B50 /* Assets.xcassets */,
-				530CDF0323733FE600335B50 /* LaunchScreen.storyboard */,
 				530CDF0623733FE600335B50 /* Info.plist */,
+				530CDF122373619E00335B50 /* Extensions+Helpers */,
+				530CDF1923736A2900335B50 /* IntroViews.storyboard */,
+				530CDEFE23733FE400335B50 /* Main.storyboard */,
+				530CDF0D2373608700335B50 /* ViewControllers */,
+				530CDF0C2373400500335B50 /* Resources */,
 			);
 			path = PuppyPatisserie;
+			sourceTree = "<group>";
+		};
+		530CDF0C2373400500335B50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				530CDEF823733FE400335B50 /* AppDelegate.swift */,
+				530CDEFA23733FE400335B50 /* SceneDelegate.swift */,
+				530CDF0123733FE600335B50 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		530CDF0D2373608700335B50 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		530CDF122373619E00335B50 /* Extensions+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Extensions+Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +146,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530CDF0523733FE600335B50 /* LaunchScreen.storyboard in Resources */,
 				530CDF0223733FE600335B50 /* Assets.xcassets in Resources */,
+				530CDF1A23736A2900335B50 /* IntroViews.storyboard in Resources */,
 				530CDF0023733FE400335B50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +159,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530CDEFD23733FE400335B50 /* ViewController.swift in Sources */,
 				530CDEF923733FE400335B50 /* AppDelegate.swift in Sources */,
 				530CDEFB23733FE400335B50 /* SceneDelegate.swift in Sources */,
 			);
@@ -153,14 +173,6 @@
 				530CDEFF23733FE400335B50 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		530CDF0323733FE600335B50 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				530CDF0423733FE600335B50 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
 				INFOPLIST_FILE = PuppyPatisserie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
 				INFOPLIST_FILE = PuppyPatisserie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
