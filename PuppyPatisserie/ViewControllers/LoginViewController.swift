@@ -10,6 +10,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //Colors
+    let gray = hexStringToUIColor(hex: "#30333A")
+    let orange = hexStringToUIColor(hex: "#E06641")
+    let pink = hexStringToUIColor(hex: "#F298AB")
+    let white = hexStringToUIColor(hex: "#F6EEDA")
+    let taupe = hexStringToUIColor(hex: "#B4BE57")
+    var gradientLayer: CAGradientLayer!
+    var hasAccount = false
+    
     //Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,9 +26,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var toggleButtton: UIButton!
     
     //Lifecycle
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         createGradient()
     }
     
@@ -27,19 +38,25 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         checkDarkMode()
         setupView()
+        toggleAccountStatus()
     }
     
+    //Actions
+    @IBAction func toggleButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
     
+    //Helper Fnctions
     func setupView() {
         loginButton.layer.cornerRadius = 22
         signupButton.layer.cornerRadius = 22
@@ -49,10 +66,22 @@ class LoginViewController: UIViewController {
     }
     
     func createGradient() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor(hex: "#FFB284") as Any, UIColor(hex: "#E79796") as Any]
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = backgroundView.bounds
+        gradientLayer.colors = [white.cgColor, orange.cgColor]
+        gradientLayer.cornerRadius = 25
         backgroundView.layer.addSublayer(gradientLayer)
+    }
+    
+    func toggleAccountStatus() {
+        if hasAccount {
+            confirmTextField.isHidden = true
+            signupButton.isHidden = true
+            toggleButtton.setTitle("Create Account", for: .normal)
+        } else {
+            loginButton.isHidden = true
+            toggleButtton.setTitle("Sign in", for: .normal)
+        }
     }
     
     func checkDarkMode() {
@@ -62,12 +91,14 @@ class LoginViewController: UIViewController {
             signupButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             loginButton.setTitleColor(.black, for: .normal)
             signupButton.setTitleColor(.black, for: .normal)
+            toggleButtton.setTitleColor(.black, for: .normal)
         } else {
             view.backgroundColor = UIColor.white
             loginButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             signupButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             loginButton.setTitleColor(.white, for: .normal)
             signupButton.setTitleColor(.white, for: .normal)
+            toggleButtton.setTitleColor(.white, for: .normal)
         }
     }
 
