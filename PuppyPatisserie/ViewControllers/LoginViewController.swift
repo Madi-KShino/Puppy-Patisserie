@@ -43,6 +43,29 @@ class LoginViewController: UIViewController {
     
     //Actions
     @IBAction func toggleButtonTapped(_ sender: Any) {
+        if hasAccount {
+            hasAccount = false
+            UIView.animate(withDuration: 0.5) {
+                self.confirmTextField.alpha = 1
+                self.signupButton.alpha = 1
+                self.loginButton.alpha = 0
+                self.confirmTextField.isHidden = false
+                self.signupButton.isHidden = false
+                self.loginButton.isHidden = true
+                self.toggleButtton.setTitle("Sign In", for: .normal)
+            }
+        } else {
+            hasAccount = true
+            UIView.animate(withDuration: 0.5) {
+                self.confirmTextField.alpha = 0
+                self.signupButton.alpha = 0
+                self.loginButton.alpha = 1
+                self.confirmTextField.isHidden = true
+                self.signupButton.isHidden = true
+                self.loginButton.isHidden = false
+                self.toggleButtton.setTitle("Create Account", for: .normal)
+            }
+        }
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
@@ -80,7 +103,7 @@ class LoginViewController: UIViewController {
             toggleButtton.setTitle("Create Account", for: .normal)
         } else {
             loginButton.isHidden = true
-            toggleButtton.setTitle("Sign in", for: .normal)
+            toggleButtton.setTitle("Sign In", for: .normal)
         }
     }
     
