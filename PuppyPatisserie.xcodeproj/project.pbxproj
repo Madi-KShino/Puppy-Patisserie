@@ -14,6 +14,9 @@
 		530CDF1E2373863000335B50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CDF1D2373863000335B50 /* LoginViewController.swift */; };
 		530CDF20237389E800335B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530CDF1F237389E800335B50 /* Main.storyboard */; };
 		530CDF222374805500335B50 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CDF212374805500335B50 /* ColorExtension.swift */; };
+		53D6ECF12374D9B30062FAB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF02374D9B30062FAB8 /* HomeViewController.swift */; };
+		53D6ECF42374DA010062FAB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF32374DA010062FAB8 /* User.swift */; };
+		53D6ECF6237870240062FAB8 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF5237870240062FAB8 /* CustomUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		530CDF1D2373863000335B50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		530CDF1F237389E800335B50 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		530CDF212374805500335B50 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		53D6ECF02374D9B30062FAB8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		53D6ECF32374DA010062FAB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		53D6ECF5237870240062FAB8 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			children = (
 				530CDF0623733FE600335B50 /* Info.plist */,
 				530CDF1F237389E800335B50 /* Main.storyboard */,
+				53D6ECF22374D9F30062FAB8 /* Model */,
 				530CDF122373619E00335B50 /* Extensions+Helpers */,
 				530CDF0D2373608700335B50 /* ViewControllers */,
 				530CDF0C2373400500335B50 /* Resources */,
@@ -82,6 +89,7 @@
 			children = (
 				530CDF1B23736C1B00335B50 /* LaunchScreenViewController.swift */,
 				530CDF1D2373863000335B50 /* LoginViewController.swift */,
+				53D6ECF02374D9B30062FAB8 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,8 +98,17 @@
 			isa = PBXGroup;
 			children = (
 				530CDF212374805500335B50 /* ColorExtension.swift */,
+				53D6ECF5237870240062FAB8 /* CustomUI.swift */,
 			);
 			path = "Extensions+Helpers";
+			sourceTree = "<group>";
+		};
+		53D6ECF22374D9F30062FAB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53D6ECF32374DA010062FAB8 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +186,9 @@
 				530CDF1C23736C1B00335B50 /* LaunchScreenViewController.swift in Sources */,
 				530CDEFB23733FE400335B50 /* SceneDelegate.swift in Sources */,
 				530CDF222374805500335B50 /* ColorExtension.swift in Sources */,
+				53D6ECF12374D9B30062FAB8 /* HomeViewController.swift in Sources */,
+				53D6ECF6237870240062FAB8 /* CustomUI.swift in Sources */,
+				53D6ECF42374DA010062FAB8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

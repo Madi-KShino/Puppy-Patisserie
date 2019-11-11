@@ -11,11 +11,6 @@ import UIKit
 class LoginViewController: UIViewController {
 
     //Colors
-    let gray = hexStringToUIColor(hex: "#30333A")
-    let orange = hexStringToUIColor(hex: "#E06641")
-    let pink = hexStringToUIColor(hex: "#F298AB")
-    let white = hexStringToUIColor(hex: "#F6EEDA")
-    let taupe = hexStringToUIColor(hex: "#B4BE57")
     var gradientLayer: CAGradientLayer!
     var hasAccount = false
     
@@ -23,10 +18,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var loginButton: PuppyButtons!
+    @IBOutlet weak var signupButton: PuppyButtons!
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var toggleButtton: UIButton!
+    @IBOutlet weak var toggleButtton: PuppyButtons!
     
     //Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +31,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkDarkMode()
         setupView()
         toggleAccountStatus()
     }
@@ -91,7 +85,7 @@ class LoginViewController: UIViewController {
     func createGradient() {
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = backgroundView.bounds
-        gradientLayer.colors = [white.cgColor, orange.cgColor]
+        gradientLayer.colors = [offWhite.cgColor, orange.cgColor]
         gradientLayer.cornerRadius = 25
         backgroundView.layer.addSublayer(gradientLayer)
     }
@@ -106,23 +100,4 @@ class LoginViewController: UIViewController {
             toggleButtton.setTitle("Sign In", for: .normal)
         }
     }
-    
-    func checkDarkMode() {
-        if self.traitCollection.userInterfaceStyle == .dark {
-            view.backgroundColor = UIColor.black
-            loginButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            signupButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            loginButton.setTitleColor(.black, for: .normal)
-            signupButton.setTitleColor(.black, for: .normal)
-            toggleButtton.setTitleColor(.black, for: .normal)
-        } else {
-            view.backgroundColor = UIColor.white
-            loginButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            signupButton.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            loginButton.setTitleColor(.white, for: .normal)
-            signupButton.setTitleColor(.white, for: .normal)
-            toggleButtton.setTitleColor(.white, for: .normal)
-        }
-    }
-
 }
