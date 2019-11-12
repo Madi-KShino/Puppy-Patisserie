@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,24 +56,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIH-RC-qoW">
-                                <rect key="frame" x="32" y="353" width="352" height="493"/>
+                                <rect key="frame" x="32" y="423" width="352" height="448"/>
                                 <color key="backgroundColor" red="0.86104637384414673" green="0.60424506664276123" blue="0.59607177972793579" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LEg-OA-ApJ">
-                                <rect key="frame" x="59" y="440.5" width="298" height="284"/>
+                                <rect key="frame" x="58" y="505" width="298" height="284"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yus-sE-Y41">
-                                        <rect key="frame" x="0.0" y="0.0" width="298" height="44.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yus-sE-Y41">
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="45"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.15394905821917809" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xRX-A1-MAq">
+                                        <rect key="frame" x="0.0" y="60" width="298" height="44.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.15394905821917809" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xRX-A1-MAq">
-                                        <rect key="frame" x="0.0" y="59.5" width="298" height="45"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9kE-no-Mia">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9kE-no-Mia">
                                         <rect key="frame" x="0.0" y="119.5" width="298" height="45"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.15394905821917809" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -98,41 +108,44 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="7Nj-vE-ISF" firstAttribute="height" secondItem="vIV-st-oRJ" secondAttribute="height" id="zww-Gi-36H"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IyH-dV-0px">
-                                <rect key="frame" x="20" y="50" width="221.5" height="236"/>
+                                <rect key="frame" x="32" y="94" width="248.5" height="259.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TjH-Vd-PEt">
-                                        <rect key="frame" x="0.0" y="0.0" width="221.5" height="164"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="190"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzr-d4-Glp">
-                                                <rect key="frame" x="0.0" y="0.0" width="221.5" height="26"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pzr-d4-Glp" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="228" height="32.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                 <color key="textColor" red="0.86104637380000004" green="0.60424506659999999" blue="0.59607177970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puppy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hse-N1-XLx">
-                                                <rect key="frame" x="0.0" y="26" width="221.5" height="56"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="43"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puppy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hse-N1-XLx" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="32.5" width="228" height="62.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="48"/>
                                                 <color key="textColor" red="0.86104637380000004" green="0.60424506659999999" blue="0.59607177970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patisserie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxR-7w-SX6">
-                                                <rect key="frame" x="0.0" y="82" width="221.5" height="56"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="43"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patisserie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxR-7w-SX6" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="95" width="228" height="62.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="48"/>
                                                 <color key="textColor" red="0.86104637380000004" green="0.60424506659999999" blue="0.59607177970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EST. 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-Z2-psL">
-                                                <rect key="frame" x="0.0" y="138" width="221.5" height="26"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EST. 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-Z2-psL" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="157.5" width="228" height="32.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
                                                 <color key="textColor" red="0.86104637380000004" green="0.60424506659999999" blue="0.59607177970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2td-ei-uY9">
-                                        <rect key="frame" x="0.0" y="174" width="62" height="62"/>
+                                        <rect key="frame" x="0.0" y="200" width="59.5" height="59.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2td-ei-uY9" secondAttribute="height" multiplier="1:1" id="4gM-Op-jZu"/>
@@ -141,7 +154,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-mQ-sZn" customClass="PuppyButtons" customModule="PuppyPatisserie" customModuleProvider="target">
-                                <rect key="frame" x="246" y="729.5" width="106" height="32"/>
+                                <rect key="frame" x="245" y="794" width="106" height="32"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,16 +167,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="tIH-RC-qoW" firstAttribute="centerX" secondItem="sTA-DQ-IOd" secondAttribute="centerX" constant="1" id="0KT-Jm-259"/>
+                            <constraint firstItem="IyH-dV-0px" firstAttribute="top" secondItem="65A-hC-9Lb" secondAttribute="top" constant="50" id="16F-YJ-oYC"/>
                             <constraint firstItem="LEg-OA-ApJ" firstAttribute="bottom" secondItem="u2o-mQ-sZn" secondAttribute="top" constant="-5" id="2Hm-mf-njV"/>
-                            <constraint firstAttribute="bottom" secondItem="tIH-RC-qoW" secondAttribute="bottom" constant="50" id="DNH-8I-FZo"/>
-                            <constraint firstItem="2td-ei-uY9" firstAttribute="width" secondItem="sTA-DQ-IOd" secondAttribute="width" multiplier="0.15" id="PcP-Bf-6no"/>
-                            <constraint firstItem="LEg-OA-ApJ" firstAttribute="centerY" secondItem="sTA-DQ-IOd" secondAttribute="centerY" multiplier="1.3" id="Qys-KS-KgG"/>
-                            <constraint firstItem="7Nj-vE-ISF" firstAttribute="centerX" secondItem="tIH-RC-qoW" secondAttribute="centerX" id="aDo-eF-wjN"/>
+                            <constraint firstItem="LEg-OA-ApJ" firstAttribute="centerY" secondItem="tIH-RC-qoW" secondAttribute="centerY" id="2mb-lB-Aei"/>
+                            <constraint firstAttribute="bottom" secondItem="tIH-RC-qoW" secondAttribute="bottom" constant="25" id="DNH-8I-FZo"/>
+                            <constraint firstItem="2td-ei-uY9" firstAttribute="width" secondItem="LEg-OA-ApJ" secondAttribute="width" multiplier="0.2" id="Gei-Rb-4df"/>
+                            <constraint firstItem="IyH-dV-0px" firstAttribute="width" secondItem="sTA-DQ-IOd" secondAttribute="width" multiplier="0.6" id="IZG-bg-8UA"/>
+                            <constraint firstItem="LEg-OA-ApJ" firstAttribute="centerX" secondItem="sTA-DQ-IOd" secondAttribute="centerX" id="Oec-Ew-nWs"/>
                             <constraint firstItem="tIH-RC-qoW" firstAttribute="width" secondItem="sTA-DQ-IOd" secondAttribute="width" multiplier="0.85" id="bfI-3f-k08"/>
-                            <constraint firstItem="tIH-RC-qoW" firstAttribute="height" secondItem="sTA-DQ-IOd" secondAttribute="height" multiplier="0.55" id="clq-yF-uJ7"/>
+                            <constraint firstItem="TjH-Vd-PEt" firstAttribute="width" secondItem="sTA-DQ-IOd" secondAttribute="width" multiplier="0.55" id="by3-1b-1uo"/>
+                            <constraint firstItem="tIH-RC-qoW" firstAttribute="height" secondItem="sTA-DQ-IOd" secondAttribute="height" multiplier="0.5" id="clq-yF-uJ7"/>
                             <constraint firstItem="LEg-OA-ApJ" firstAttribute="width" secondItem="sTA-DQ-IOd" secondAttribute="width" multiplier="0.72" id="eZc-NV-MPE"/>
-                            <constraint firstItem="IyH-dV-0px" firstAttribute="leading" secondItem="sTA-DQ-IOd" secondAttribute="leading" constant="20" id="fnC-Ag-eIS"/>
-                            <constraint firstItem="IyH-dV-0px" firstAttribute="top" secondItem="sTA-DQ-IOd" secondAttribute="top" constant="50" id="iCA-Af-WHm"/>
+                            <constraint firstItem="IyH-dV-0px" firstAttribute="leading" secondItem="tIH-RC-qoW" secondAttribute="leading" id="rJF-mW-eMi"/>
                             <constraint firstItem="u2o-mQ-sZn" firstAttribute="trailing" secondItem="LEg-OA-ApJ" secondAttribute="trailing" constant="-5" id="ssG-8b-0nI"/>
                             <constraint firstItem="vIV-st-oRJ" firstAttribute="height" secondItem="sTA-DQ-IOd" secondAttribute="height" multiplier="0.05" id="vta-KH-mzD"/>
                         </constraints>
@@ -197,7 +212,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-Bv-7uA">
                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="45.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-bg-qE9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-bg-qE9" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="45.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
                                                 <color key="textColor" red="0.86104637380000004" green="0.60424506659999999" blue="0.59607177970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -250,25 +265,100 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delicious and healthy homemade treats for your furry friends! Made fresh and delivered right to your doorstep." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awo-jE-Am9">
-                                <rect key="frame" x="72" y="267.5" width="332" height="99"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
-                                <color key="textColor" red="0.86104637380000004" green="0.60424506659999999" blue="0.59607177970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-AB-6Ot">
+                                <rect key="frame" x="62" y="316.5" width="352" height="336.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iYr-py-DI8">
+                                    <size key="itemSize" width="283" height="335.5"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="8nn-3E-b21" customClass="TreatCollectionViewCell" customModule="PuppyPatisserie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="283" height="335.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ucB-CK-fMP">
+                                            <rect key="frame" x="0.0" y="0.0" width="283" height="335.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o6I-EE-pL7">
+                                                    <rect key="frame" x="215" y="105" width="58" height="58.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdL-rE-WUU" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="58" height="26"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                            <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2E-aK-jID" customClass="PuppyLabel" customModule="PuppyPatisserie" customModuleProvider="target">
+                                                            <rect key="frame" x="16" y="36" width="42" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AfP-jG-6Tf">
+                                                    <rect key="frame" x="188" y="10" width="85" height="85"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="AfP-jG-6Tf" secondAttribute="height" multiplier="1:1" id="bWv-zm-yUU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="o6I-EE-pL7" secondAttribute="trailing" constant="10" id="96T-oX-BF2"/>
+                                                <constraint firstAttribute="trailing" secondItem="AfP-jG-6Tf" secondAttribute="trailing" constant="10" id="HQy-fR-bkd"/>
+                                                <constraint firstItem="AfP-jG-6Tf" firstAttribute="width" secondItem="ucB-CK-fMP" secondAttribute="width" multiplier="0.3" id="HiL-Hj-zoa"/>
+                                                <constraint firstItem="o6I-EE-pL7" firstAttribute="top" secondItem="AfP-jG-6Tf" secondAttribute="bottom" constant="10" id="WGp-TS-qjJ"/>
+                                                <constraint firstItem="AfP-jG-6Tf" firstAttribute="top" secondItem="ucB-CK-fMP" secondAttribute="top" constant="10" id="edD-o3-egz"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="283" height="335.5"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="h2E-aK-jID" id="NKh-kd-ndh"/>
+                                            <outlet property="nameLabel" destination="QdL-rE-WUU" id="soi-eS-0QA"/>
+                                            <outlet property="treatImageView" destination="AfP-jG-6Tf" id="ISe-r4-a0H"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-NN-681" customClass="PuppyButtons" customModule="PuppyPatisserie" customModuleProvider="target">
+                                <rect key="frame" x="313" y="707" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sE4-NN-681" secondAttribute="height" multiplier="1:1" id="l6b-hR-MO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dP-LF-FMg">
+                                <rect key="frame" x="313" y="707" width="51" height="51"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="zfJ-mw-KfP" eventType="touchUpInside" id="NBa-Zd-BH0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="adm-Om-RJa" firstAttribute="centerX" secondItem="iTN-d0-xwr" secondAttribute="centerX" id="0EL-GT-4V8"/>
+                            <constraint firstItem="cNp-Vo-fbf" firstAttribute="trailing" secondItem="Szi-AB-6Ot" secondAttribute="trailing" id="0Yf-2Q-zxU"/>
                             <constraint firstItem="Frf-Kl-JeD" firstAttribute="width" secondItem="bZ8-Ry-Dea" secondAttribute="width" multiplier="0.15" id="7ca-kM-vJg"/>
-                            <constraint firstItem="awo-jE-Am9" firstAttribute="leading" secondItem="iTN-d0-xwr" secondAttribute="trailing" constant="10" id="D9o-Av-jl0"/>
+                            <constraint firstItem="Szi-AB-6Ot" firstAttribute="centerY" secondItem="cNp-Vo-fbf" secondAttribute="centerY" multiplier="1.2" id="D3O-TE-uS2"/>
+                            <constraint firstItem="cNp-Vo-fbf" firstAttribute="trailing" secondItem="sE4-NN-681" secondAttribute="trailing" constant="50" id="EUT-VM-IeZ"/>
                             <constraint firstItem="iTN-d0-xwr" firstAttribute="width" secondItem="bZ8-Ry-Dea" secondAttribute="width" multiplier="0.15" id="FwC-nj-Lsb"/>
+                            <constraint firstItem="cNp-Vo-fbf" firstAttribute="trailing" secondItem="5dP-LF-FMg" secondAttribute="trailing" constant="50" id="HQL-CT-OrE"/>
+                            <constraint firstItem="5dP-LF-FMg" firstAttribute="width" secondItem="5dP-LF-FMg" secondAttribute="height" multiplier="1:1" id="JKf-X0-rEX"/>
                             <constraint firstItem="iTN-d0-xwr" firstAttribute="leading" secondItem="bZ8-Ry-Dea" secondAttribute="leading" id="JYA-mA-rgn"/>
                             <constraint firstAttribute="bottom" secondItem="iTN-d0-xwr" secondAttribute="bottom" id="OF1-9F-k15"/>
-                            <constraint firstAttribute="trailing" secondItem="awo-jE-Am9" secondAttribute="trailing" constant="10" id="Pdg-SD-yt0"/>
-                            <constraint firstItem="awo-jE-Am9" firstAttribute="top" secondItem="mZs-sb-Z0P" secondAttribute="bottom" constant="100" id="kjy-wE-vbY"/>
+                            <constraint firstItem="Szi-AB-6Ot" firstAttribute="leading" secondItem="iTN-d0-xwr" secondAttribute="trailing" id="ZKW-bx-Hkq"/>
+                            <constraint firstItem="Szi-AB-6Ot" firstAttribute="height" secondItem="bZ8-Ry-Dea" secondAttribute="height" multiplier="0.4" id="jPa-js-zwb"/>
+                            <constraint firstItem="Szi-AB-6Ot" firstAttribute="centerX" secondItem="cNp-Vo-fbf" secondAttribute="centerX" multiplier="1.15" id="kOG-C3-aPY"/>
                             <constraint firstItem="mZs-sb-Z0P" firstAttribute="top" secondItem="cNp-Vo-fbf" secondAttribute="top" constant="50" id="o0j-7s-DVm"/>
                             <constraint firstItem="adm-Om-RJa" firstAttribute="centerY" secondItem="iTN-d0-xwr" secondAttribute="centerY" multiplier="1.3" id="ooz-TB-iGK"/>
+                            <constraint firstItem="cNp-Vo-fbf" firstAttribute="bottom" secondItem="5dP-LF-FMg" secondAttribute="bottom" constant="50" id="qUm-AU-AAg"/>
+                            <constraint firstItem="cNp-Vo-fbf" firstAttribute="bottom" secondItem="sE4-NN-681" secondAttribute="bottom" constant="50" id="r8a-br-qp4"/>
                             <constraint firstItem="mZs-sb-Z0P" firstAttribute="leading" secondItem="iTN-d0-xwr" secondAttribute="trailing" constant="10" id="vPg-fe-QjJ"/>
                             <constraint firstItem="iTN-d0-xwr" firstAttribute="top" secondItem="cNp-Vo-fbf" secondAttribute="top" id="z4F-UW-aGk"/>
                         </constraints>
@@ -276,9 +366,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="8sp-8I-n1V"/>
                     <connections>
+                        <outlet property="addButton" destination="5dP-LF-FMg" id="T2n-Dp-oWY"/>
                         <outlet property="helloLabel" destination="dXg-bg-qE9" id="8I3-XA-GaV"/>
                         <outlet property="sideMenuButtonStack" destination="adm-Om-RJa" id="GPS-eP-ynE"/>
                         <outlet property="sideMenuView" destination="iTN-d0-xwr" id="dsl-aT-B13"/>
+                        <outlet property="treatsCollectionView" destination="Szi-AB-6Ot" id="czL-k5-kIR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKG-cR-3go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,8 @@
 		53D6ECF12374D9B30062FAB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF02374D9B30062FAB8 /* HomeViewController.swift */; };
 		53D6ECF42374DA010062FAB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF32374DA010062FAB8 /* User.swift */; };
 		53D6ECF6237870240062FAB8 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF5237870240062FAB8 /* CustomUI.swift */; };
+		53D6ECF8237A24790062FAB8 /* TreatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF7237A24790062FAB8 /* TreatCollectionViewCell.swift */; };
+		53D6ECFA237A25060062FAB8 /* Treat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D6ECF9237A25060062FAB8 /* Treat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		53D6ECF02374D9B30062FAB8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		53D6ECF32374DA010062FAB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53D6ECF5237870240062FAB8 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
+		53D6ECF7237A24790062FAB8 /* TreatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatCollectionViewCell.swift; sourceTree = "<group>"; };
+		53D6ECF9237A25060062FAB8 /* Treat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				530CDF1B23736C1B00335B50 /* LaunchScreenViewController.swift */,
 				530CDF1D2373863000335B50 /* LoginViewController.swift */,
 				53D6ECF02374D9B30062FAB8 /* HomeViewController.swift */,
+				53D6ECF7237A24790062FAB8 /* TreatCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				53D6ECF32374DA010062FAB8 /* User.swift */,
+				53D6ECF9237A25060062FAB8 /* Treat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,8 +191,10 @@
 				530CDEF923733FE400335B50 /* AppDelegate.swift in Sources */,
 				530CDF1C23736C1B00335B50 /* LaunchScreenViewController.swift in Sources */,
 				530CDEFB23733FE400335B50 /* SceneDelegate.swift in Sources */,
+				53D6ECFA237A25060062FAB8 /* Treat.swift in Sources */,
 				530CDF222374805500335B50 /* ColorExtension.swift in Sources */,
 				53D6ECF12374D9B30062FAB8 /* HomeViewController.swift in Sources */,
+				53D6ECF8237A24790062FAB8 /* TreatCollectionViewCell.swift in Sources */,
 				53D6ECF6237870240062FAB8 /* CustomUI.swift in Sources */,
 				53D6ECF42374DA010062FAB8 /* User.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     //Colors
-    var gradientLayer: CAGradientLayer!
+//    var gradientLayer: CAGradientLayer!
     var hasAccount = false
     
     //Outlets
@@ -26,13 +26,15 @@ class LoginViewController: UIViewController {
     //Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        createGradient()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        addGradient()
         toggleAccountStatus()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     //Actions
@@ -75,19 +77,17 @@ class LoginViewController: UIViewController {
     
     //Helper Fnctions
     func setupView() {
-        loginButton.layer.cornerRadius = 22
-        signupButton.layer.cornerRadius = 22
+        loginButton.layer.cornerRadius = (loginButton.frame.height / 2)
+        signupButton.layer.cornerRadius = (signupButton.frame.height / 2)
         loginButton.layer.borderWidth = 4
         signupButton.layer.borderWidth = 4
         backgroundView.layer.cornerRadius = 25
     }
     
-    func createGradient() {
-        gradientLayer = CAGradientLayer()
-        gradientLayer.frame = backgroundView.bounds
-        gradientLayer.colors = [offWhite.cgColor, orange.cgColor]
-        gradientLayer.cornerRadius = 25
-        backgroundView.layer.addSublayer(gradientLayer)
+    func addGradient() {
+        let gradientView = GradientView(frame: backgroundView.bounds)
+        gradientView.layer.cornerRadius = backgroundView.layer.cornerRadius
+        backgroundView.insertSubview(gradientView, at: 0)
     }
     
     func toggleAccountStatus() {
@@ -99,5 +99,24 @@ class LoginViewController: UIViewController {
             loginButton.isHidden = true
             toggleButtton.setTitle("Sign In", for: .normal)
         }
+    }
+}
+
+//DISSMISS KEYBOARD
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension LoginViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

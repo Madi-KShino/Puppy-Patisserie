@@ -13,7 +13,7 @@ let gray = hexStringToUIColor(hex: "#30333A")
 let orange = hexStringToUIColor(hex: "#E06641")
 let pink = hexStringToUIColor(hex: "#F298AB")
 let white = hexStringToUIColor(hex: "#F6EEDA")
-let taupe = hexStringToUIColor(hex: "#B4BE57")
+let taupe = hexStringToUIColor(hex: "#F0D0C1")
 let offWhite = hexStringToUIColor(hex: "#FAF2E1")
 
 public func hexStringToUIColor (hex:String) -> UIColor {
